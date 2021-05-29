@@ -1,7 +1,8 @@
+import axios from 'axios';
+
 function fetchCountries(searchQuery) {
-  return fetch(`https://restcountries.eu/rest/v2/name/${searchQuery}`).then(response => {
-    return response.json();
-  });
+  axios.defaults.baseURL = 'https://restcountries.eu/rest/v2/name';
+  return axios.get(`/${searchQuery}`).then(response => response.data);
 }
 
 export default fetchCountries;
