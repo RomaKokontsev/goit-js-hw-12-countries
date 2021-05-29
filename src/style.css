@@ -1,0 +1,38 @@
+.title {
+  font-size: 30px;
+  margin-left: 300px;
+  margin-bottom: 30px;
+}
+input {
+  margin-top: 25px;
+  margin-left: 25px;
+  width: 250px;
+  height: 35px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 20px;
+}
+.countries {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.description-countries {
+  display: flex;
+}
+
+.description-list {
+  margin-right: 100px;
+}
+
+.description-item {
+  list-style: none;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.language,
+p {
+  font-weight: 350;
+  margin-top: 10px;
+}
