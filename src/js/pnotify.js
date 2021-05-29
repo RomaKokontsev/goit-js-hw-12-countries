@@ -3,13 +3,13 @@ import '@pnotify/core/dist/PNotify.css';
 import '@pnotify/core/dist/BrightTheme.css';
 
 const notificationSpecific = () => {
-  Pnotify({
+  Pnotify.error({
     text: 'Too many matches found. Please enter a more specific query!',
   });
 };
 
 const errorNotification = () => {
-  Pnotify({
+  Pnotify.error({
     text: 'Country is not found.',
   });
 };
