@@ -1,6 +1,6 @@
 import './style.css';
 import debounce from 'lodash.debounce';
-import { notificationSpecific, errorNotification } from './js/pnotify';
+import { notificationSpecific, errorNotification, successNotification } from './js/pnotify';
 import countryCard from './js/hbs/cardCountries.hbs';
 import countriesList from './js/hbs/countriesList.hbs';
 import countriesFetch from './js/fetchCountries';
@@ -34,6 +34,7 @@ function onSearch(e) {
           renderCountries(data, countriesList);
         } else if (data.length === 1) {
           renderCountries(data, countryCard);
+          successNotification();
         }
       })
       .catch(data => errorNotification())

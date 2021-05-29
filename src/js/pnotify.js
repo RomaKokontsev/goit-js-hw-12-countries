@@ -15,5 +15,11 @@ const errorNotification = () => {
     delay: 1500,
   });
 };
+const successNotification = () => {
+  Pnotify.success({
+    text: 'Country is  found.',
+    delay: 1500,
+  });
+};
 
-export { notificationSpecific, errorNotification };
+export { notificationSpecific, errorNotification, successNotification };
