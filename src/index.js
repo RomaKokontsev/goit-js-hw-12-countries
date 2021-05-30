@@ -24,6 +24,11 @@ refs.input.addEventListener('input', debounce(onSearch, 500));
 function onSearch(e) {
   const query = e.target.value.trim();
 
+  clearContainer();
+  if (!query) {
+    return;
+  }
+
   if (query) {
     countriesFetch(query)
       .then(data => {
@@ -37,7 +42,6 @@ function onSearch(e) {
           successNotification();
         }
       })
-      .catch(data => errorNotification())
-      .finally(clearContainer());
+      .catch(data => errorNotification());
   }
 }
